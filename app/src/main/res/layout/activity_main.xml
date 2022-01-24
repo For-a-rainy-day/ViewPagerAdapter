@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <me.relex.circleindicator.CircleIndicator3
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:ci_drawable_unselected="@drawable/indicator_inactive"
+       app:ci_drawable="@drawable/indicator_active"
+        android:layout_width="match_parent"
+       android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginBottom="200dp"
+
+        android:id="@+id/indicator"
+        android:layout_height="50sp">
+
+<!--        android:backgroundTint="@android:color/transparent"-->
+
+    </me.relex.circleindicator.CircleIndicator3>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/blue"
+        app:cardCornerRadius="15dp"
+        android:layout_marginBottom="110dp"
+        android:id="@+id/royxat"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="40dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ro`yhatdan o`tish"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+           android:layout_gravity="center"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="40sp"
+        android:backgroundTint="#CCDFFE"
+        app:cardCornerRadius="15dp"
+        android:id="@+id/skip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="40dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="O`tkazib yuborish"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:id="@+id/view_pager2"
+        android:overScrollMode="never"
+        android:layout_above="@id/indicator"
+        android:layout_height="match_parent">
+
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+</RelativeLayout>
